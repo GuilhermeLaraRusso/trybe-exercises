@@ -1,0 +1,50 @@
+h1 {
+  font-family: sans-serif;
+
+}
+
+p {
+  font-weight: 600;
+  line-height: 3em;
+}
+
+body {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+li {
+  text-align: center;
+  font-style: oblique;
+  text-decoration: underline;
+  line-height: 3em;
+}
+
+#amarelo {
+  background-color: yellow;
+}
+
+#vermelho {
+  background-color: red;
+}
+
+#marrom {
+  background-color: brown;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#green {
+  background-color: green;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#purple {
+  background-color: purple;
+}
