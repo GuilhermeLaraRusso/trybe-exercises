@@ -1,0 +1,42 @@
+.goomba {
+  position: absolute;
+  width: 150px;
+  top: 550px;
+  left: 150px;
+}
+
+.super-mario {
+  position: absolute;
+  width: 150px;
+  top: 350px;
+  left: 100px;
+}
+
+.bowser {
+  position: absolute;
+  width: 200px;
+  left: 600px;
+  top: 500px;
+}
+
+.baloon {
+  position: absolute;
+  width: 200px;
+  left: 400px;
+  top: 450px;
+}
+
+.word {
+  position: absolute;
+  left: 415px;
+  top: 475px;
+  z-index: 2;
+}
+
+.chao {
+  background-color: rgb(4, 65, 19);
+  position: absolute;
+  width: 1000px;
+  height: 15px;
+  top: 735px;
+}
