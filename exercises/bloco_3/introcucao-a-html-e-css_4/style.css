@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: justify;
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+  text-indent: 50px;
+}
+#header {
+  border: black solid 1px;
+}
+
+#navigation {
+  border: black solid 1px;
+  background-color: pink;
+
+}
+
+#navigation li {
+  display: inline-block;
+  margin-right: 50px;
+  padding: 5px;
+}
+
+#sobre {
+  border: black solid 1px;
+  background-color: red;
+}
+
+#sobre h1 {
+  font-size: 32px;
+}
+
+#stomatopoda {
+  border: black solid 1px;
+  background-color: aqua;
+}
+
+#descricao {
+  border: black solid 1px;
+  background-color: blueviolet;
+}
+
+#classificacao-cientifica {
+  border: black solid 1px;
+  background-color: blue;
+  float: right;
+  margin: 0 1.5%;
+  width: 30%;
+  padding-left: 30px;
+}
