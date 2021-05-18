@@ -21,9 +21,35 @@ p {
   margin-bottom: 10px;
   text-indent: 50px;
 }
+
 #header {
   border: black solid 1px;
 }
+
+#imagem-mantis-shrimp {
+  width: 500px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+#imagem-mantis-shrimp-pequena {
+  width: 260px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#classificacao-cientifica {
+  border: black solid 1px;
+  background-color: blue;
+  float: right;
+  margin: 0 1.5%;
+  width: 30%;
+  padding-left: 30px;
+  padding-bottom: 50px;
+  padding-right: 20px;
+}
+
 
 #navigation {
   border: black solid 1px;
@@ -49,6 +75,7 @@ p {
 #stomatopoda {
   border: black solid 1px;
   background-color: aqua;
+  padding-bottom: 100px;
 }
 
 #descricao {
@@ -56,11 +83,3 @@ p {
   background-color: blueviolet;
 }
 
-#classificacao-cientifica {
-  border: black solid 1px;
-  background-color: blue;
-  float: right;
-  margin: 0 1.5%;
-  width: 30%;
-  padding-left: 30px;
-}
