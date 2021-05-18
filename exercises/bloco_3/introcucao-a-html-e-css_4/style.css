@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: justify;
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+  text-indent: 50px;
+}
+
+#header {
+  border: black solid 1px;
+}
+
+#imagem-mantis-shrimp {
+  width: 500px;
+  max-width: max-content;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+#imagem-mantis-shrimp-pequena {
+  width: 250px;
+  max-width: fit-content;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#imagem-visao {
+  width: 200px;
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+#classificacao-cientifica {
+  border: black solid 1px;
+  background-color: blue;
+  float: right;
+  margin: 0 1.5%;
+  width: 20%;
+  height: fit-content;
+  padding-left: 30px;
+  padding-bottom: 50px;
+  padding-right: 20px;
+}
+
+#shrimp-video {
+  float: right;
+  margin-right: 20px;
+}
+
+
+#navigation {
+  border: black solid 1px;
+  background-color: pink;
+
+}
+
+#navigation li {
+  display: inline-block;
+  margin-right: 50px;
+  padding: 5px;
+}
+
+.sobre {
+  border: black solid 1px;
+  background-color: red;
+  width: 50%;
+  margin-left: 10%;
+}
+
+#sobre h1 {
+  font-size: 32px;
+}
+
+#stomatopoda {
+  border: black solid 1px;
+  background-color: aqua;
+  padding-bottom: 100px;
+}
+
+#descricao {
+  border: black solid 1px;
+  background-color: blueviolet;
+  width: fit-content;
+
+}
+
+#referencias li{
+  margin-left: 30px;
+}
+
+#footer {
+  float: right;
+  margin-right: 50px;
+}
+
