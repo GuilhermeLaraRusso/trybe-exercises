@@ -10,6 +10,3 @@ for (index = 0; index < n; index += 1) {
   line = line + '*';
     console.log(line);
 }
-
-// repetir a linha 'n' vezes
-
