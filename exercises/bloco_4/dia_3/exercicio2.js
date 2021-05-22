@@ -4,9 +4,9 @@ let n = 10;
 
 // fazer a linha igual a 'n' vezes asterisco
 
-let line = '';
+let row = '';
 
 for (index = 0; index < n; index += 1) {
-  line = line + '*';
-    console.log(line);
+  row = row + '*';
+    console.log(row);
 }
