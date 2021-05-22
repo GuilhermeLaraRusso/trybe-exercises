@@ -1,4 +1,7 @@
-let n = 10;
+// 5- Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de n será sempre ímpar:
+
+
+let n = 7;
 
 let row = '';
 let empty = ' ';
@@ -18,4 +21,4 @@ for (index = 0; index < n; index += 1) {
   }
 }
 
-console.log(empty.repeat(mid) + asterisco.repeat(n+1));
+console.log(empty.repeat(mid-1) + asterisco.repeat(n+2));
