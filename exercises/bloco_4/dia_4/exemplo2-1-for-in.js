@@ -10,3 +10,4 @@ let names = {
 for (key in names){
   console.log('Olá ' + names[key])
 };
+
