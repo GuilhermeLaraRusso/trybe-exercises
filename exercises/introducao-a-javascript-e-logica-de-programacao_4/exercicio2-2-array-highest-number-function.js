@@ -14,4 +14,4 @@ function highestArrayValue (array) {
   return maiorNumero;
 }
 
-console.log(highestArrayValue([50, 3, 6, 7, 10, 1]))
+console.log(highestArrayValue([5, 3, 6, 7, 10, 1]))
