@@ -73,4 +73,4 @@ function calcularRomano(string) {
   return numeral;
 }
 
-console.log(calcularRomano("CMO"));
+console.log(calcularRomano("MMXXI"));
