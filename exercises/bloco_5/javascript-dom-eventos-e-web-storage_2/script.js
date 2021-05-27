@@ -19,6 +19,14 @@
 
 
 
+// Função para criar div
+
+function createDiv(classe) {
+  let div = document.createElement('div');
+  div.className = classe;
+  return div;
+}
+
 
 // Criar o container pai sendo body
 
@@ -31,3 +39,27 @@ let firstH1 = document.createElement('h1');
 // Adicionando o h1 ao elemento pai fatherContainer
 
 fatherContainer.appendChild(firstH1).innerText = 'Exercício 5.2 - JavaScript DOM';
+
+// Adicionando a div com classe main-content no body
+
+fatherContainer.appendChild(createDiv('main-content'));
+
+// Criando a varíavel mainContent
+
+let mainContent = document.querySelector('.main-content');
+
+// Adicionando o filho .center-content à mainContent
+
+mainContent.appendChild(createDiv('center-content'));
+
+// Criando uma variável para receber o .center-content
+
+let centerContent = document.querySelector('.center-content')
+
+// Adicionando o filho de Tag p da div center-content
+
+centerContent.appendChild(document.createElement('p'));
+
+// Criando e adicionando a div com a classe left-content 
+
+mainContent.appendChild(createDiv('left-content'));
