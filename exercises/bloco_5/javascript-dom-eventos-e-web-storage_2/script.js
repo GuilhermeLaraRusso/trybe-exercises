@@ -27,6 +27,19 @@ function createDiv(classe) {
   return div;
 }
 
+// Função para criar lista de elementos não ordenados
+
+function createLI(element) {
+  let lI = document.createElement('li');
+  lI.innerText = element;
+  return lI;
+}
+
+function createH3(text){
+  let h3 = document.createElement('h3');
+  h3.innerText = text;
+  return h3
+}
 
 // Criar o container pai sendo body
 
@@ -63,3 +76,91 @@ centerContent.appendChild(document.createElement('p'));
 // Criando e adicionando a div com a classe left-content 
 
 mainContent.appendChild(createDiv('left-content'));
+
+// Criando e adicionando a div com classe right-content
+
+mainContent.appendChild(createDiv('right-content'));
+
+// Criando a variável para receber o left-content
+
+let leftContent = document.querySelector('.left-content');
+
+// Criando a tag img
+
+let image = document.createElement('img');
+
+// Adicionando a source da img
+
+image.src = 'https://picsum.photos/200';
+
+// Adicionando a fonte da imagem
+
+leftContent.appendChild(image);
+
+// Criando a variável para receber o right-content
+
+let rightContent = document.querySelector('.right-content');
+
+// Criando uma ul
+
+let uL = document.createElement('ul');
+
+// Adicionando a ul no rightContent e adicionando os itens na lista
+
+rightContent.appendChild(uL).appendChild(createLI('Um'));
+rightContent.appendChild(uL).appendChild(createLI('Dois'));
+rightContent.appendChild(uL).appendChild(createLI('Três'));
+rightContent.appendChild(uL).appendChild(createLI('Quatro'));
+rightContent.appendChild(uL).appendChild(createLI('Cinco'));
+rightContent.appendChild(uL).appendChild(createLI('Seis'));
+rightContent.appendChild(uL).appendChild(createLI('Sete'));
+rightContent.appendChild(uL).appendChild(createLI('Oito'));
+rightContent.appendChild(uL).appendChild(createLI('Nove'));
+rightContent.appendChild(uL).appendChild(createLI('Dez'));
+
+// Adicionando as tags h3
+
+mainContent.appendChild(createH3('Primeiro'));
+mainContent.appendChild(createH3('Segundo'));
+mainContent.appendChild(createH3('Terceiro'));
+
+
+
+
+
+// Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
+// Adicione a classe title na tag h1 criada;
+// Adicione a classe description nas 3 tags h3 criadas;
+// Remova o div criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+// Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div ;
+// Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+// Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+
+
+
+// Adicionando a classe title ao h1
+
+document.querySelector('h1').classList.add('title');
+
+// Adicionando a classe description nas 3 tags h3
+
+for(index = 0; index < 3; index += 1){
+  document.querySelectorAll('h3')[index].classList.add('description');
+};
+
+// Removendo a div com .removeChild()
+
+mainContent.removeChild(mainContent.childNodes[1])
+
+// Centralizando a div right-content
+
+document.querySelector('.right-content').style.marginRight = 'auto';
+
+// Trocando a cor de fundo da div center-content
+
+document.querySelector('.center-content').style.backgroundColor = 'green';
+
+// Removendo os dois últimos elementos da lista
+
+uL.removeChild(uL.childNodes[9]);
+uL.removeChild(uL.childNodes[8]);
