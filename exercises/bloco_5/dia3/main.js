@@ -53,14 +53,31 @@ function createTech(originEvent) {
   techClassToAdd.classList.add('tech');
 }
 
+// Criando variável para receber o clickDiv
 let clickDiv = document.querySelector('div');
-// let clickDivDois = document.getElementById('divDois');
 
-
-// function recebeClick(eventoDeOrigem) {
-//   console.log(eventoDeOrigem.target);
-//   console.log(eventoDeOrigem.type);
-// }
-
+// Executando o addEventListener
 clickDiv.addEventListener('click', createTech);
-// clickDiv.addEventListener('click', recebeClick)
+
+// Função para quando digitar, alterar o texto da classe tech
+function alteraTech(){
+  let myText = 'teste';
+  document.querySelector('tech').innerText = myText;
+  console.log(myText);
+}
+
+//quando apertar enter na id 'input', o texto da classe tech terá de ser alterado para o valor digitado!
+let pressEnter = document.getElementById('input');
+pressEnter.addEventListener('keyup', alteraTech)
+
+divDois.addEventListener('dblclick', resetText);
+
+// função para redirecionar a id myspotrybefy para o portifólio
+function redirect(originEvent){
+  let redireciona = originEvent.target;
+  window.open('https://guilhermelararusso.github.io/', '_blank')
+}
+
+// eventListener para dblclick
+let dblClick = document.getElementById('mySpotrybefy');
+dblClick.addEventListener('dblclick', redirect);
