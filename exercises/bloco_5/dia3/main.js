@@ -31,18 +31,23 @@ function resetText(event) {
 }
 
 divUm.addEventListener('dblclick', resetText);
+divDois.addEventListener('dblclick', resetText);
+divTres.addEventListener('dblclick', resetText);
 // Não precisa passar o parâmetro dentro do addEventListener. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
 // event.target na nossa função retornará o objeto 'divUm'.
 
 
+// chamar a função de resetar texto para qualquer quadro
+const constTech = document.querySelector('.tech');
+constTech.addEventListener('dblclick', resetText);
 
 
 
 // função para criar a classe tech
 
 function createTech(originEvent) {
-  console.log(originEvent.target);
+  // console.log(originEvent.target);
 
   // Remove a classe tech existente
   let techClassToDelete = document.querySelector('.tech');
@@ -61,16 +66,14 @@ clickDiv.addEventListener('click', createTech);
 
 // Função para quando digitar, alterar o texto da classe tech
 function alteraTech(){
-  let myText = document.querySelector('.tech');
-  myText.innerText = 'teste';
-  console.log(myText);
+  let x = document.getElementById('input').value;
+  document.querySelector('.tech').innerHTML = x;
 }
 
 //quando apertar enter na id 'input', o texto da classe tech terá de ser alterado para o valor digitado!
-let pressEnter = document.getElementById('input');
+let pressEnter = document.querySelector('#input');
 pressEnter.addEventListener('keyup', alteraTech)
 
-divDois.addEventListener('dblclick', resetText);
 
 // função para redirecionar a id myspotrybefy para o portifólio
 function redirect(originEvent){
