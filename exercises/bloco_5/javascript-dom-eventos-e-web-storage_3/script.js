@@ -81,3 +81,21 @@ let buttonFriday = document.createElement('button');
 buttonFriday.textContent = 'Sexta-feira';
 buttonFriday.id = 'btn-friday';
 document.querySelector('.buttons-container').appendChild(buttonFriday);
+
+
+//Exercício 5
+//Adicionando a função para modificar os textos das sextas feiras
+function sextou() {
+  for (let index = 0; index < dezDaysList.length; index += 1) {
+    let sextou = document.getElementsByClassName('friday')[index];
+    if(sextou.innerText !== 'SEXTOU!') {
+      sextou.innerText = 'SEXTOU!';
+    } else {
+      sextou.innerText = index;
+    }
+  }  
+}
+
+// Adicionando o evento de btnclick
+let clickFridayButton = document.querySelector('#btn-friday');
+clickFridayButton.addEventListener('click', sextou);
