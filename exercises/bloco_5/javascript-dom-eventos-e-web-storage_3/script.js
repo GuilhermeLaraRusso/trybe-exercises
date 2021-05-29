@@ -43,10 +43,16 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
   } 
 }
 
-// Exercício 2 - criando o botão feriado e adicionando sua id e adicionando como filho do buttons-container
+// Exercício 2 - criando o botão feriado 
 let button = document.createElement('button');
-button.textContent = 'Feriados'
+
+// Adicionando o conteúdo do botão
+button.textContent = 'Feriados';
+
+// Adicionado o id do botão
 button.id = 'btn-holiday';
+
+// Adicionando o botão como filho do buttons-container
 document.querySelector('.buttons-container').appendChild(button);
 
 
@@ -65,7 +71,13 @@ function changeBackgroundColor () {
 }
 
 // adicionar evento de clicar no botão
-
 let clickButton = document.querySelector('#btn-holiday')
-
 clickButton.addEventListener('click', changeBackgroundColor);
+
+
+// Exercício - 4
+// Criando o botão sexta feira
+let buttonFriday = document.createElement('button');
+buttonFriday.textContent = 'Sexta-feira';
+buttonFriday.id = 'btn-friday';
+document.querySelector('.buttons-container').appendChild(buttonFriday);
