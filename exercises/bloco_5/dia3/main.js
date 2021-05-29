@@ -61,8 +61,8 @@ clickDiv.addEventListener('click', createTech);
 
 // Função para quando digitar, alterar o texto da classe tech
 function alteraTech(){
-  let myText = 'teste';
-  document.querySelector('tech').innerText = myText;
+  let myText = document.querySelector('.tech');
+  myText.innerText = 'teste';
   console.log(myText);
 }
 
@@ -81,3 +81,21 @@ function redirect(originEvent){
 // eventListener para dblclick
 let dblClick = document.getElementById('mySpotrybefy');
 dblClick.addEventListener('dblclick', redirect);
+
+// função para alterar a cor do spotrybefy
+function changeColor(){
+  let mudaCor = document.querySelector('h1');
+  mudaCor.style.color = 'red';
+}
+
+function colorBack(){
+  let voltaCor = document.querySelector('h1');
+  voltaCor.style.color = '#2fc18c';
+}
+
+// eventlistener para mouseover
+let mouseOver = document.querySelector('h1');
+mouseOver.addEventListener('mouseover', changeColor);
+
+let mouseLeave = document.querySelector('h1');
+mouseLeave.addEventListener('mouseleave',colorBack);
