@@ -16,3 +16,7 @@ var picker = new Pikaday({
     return new Date(year, month, day);
   }
 });
+
+validation.init();
+
+validation.highlight();
