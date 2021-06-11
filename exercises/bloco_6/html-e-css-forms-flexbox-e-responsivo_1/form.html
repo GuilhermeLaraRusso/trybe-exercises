@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="bootstrap-5.0.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
@@ -52,7 +53,7 @@
           <option value="MA">Maranhão</option>
           <option value="MT">Mato Grosso</option>
           <option value="MS">Mato Grosso do Sul</option>
-          <option value="MG">Minas Gerais</option>
+          <option selected value="MG">Minas Gerais</option>
           <option value="PA">Pará</option>
           <option value="PB">Paraíba</option>
           <option value="PR">Paraná</option>
@@ -103,8 +104,11 @@
         <div id="description-help-block" class="form-text">*Campo obrigatório - Máximo de 500 caracteres</div>
       </div>
       <div class="container">
-        <label class="lead" for="date">Data</label>
-        <input type="date" name="date" id="date" class="form-text">
+        <label class="lead" for="date">Data de início</label>
+        <input type="text" id="datepicker" class="form-control">
+      </div>
+      <div class="container">
+
       </div>
     </fieldset>
     <div class="container">
@@ -112,6 +116,7 @@
       <input class="btn btn-primary" type="submit" name="enviar" id="enviar">
     </div>
   </form>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
   <script src="bootstrap-5.0.1-dist/js/bootstrap.js"></script>
   <script src="script.js"></script>
 </body>
