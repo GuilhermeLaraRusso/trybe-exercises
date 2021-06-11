@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap-5.0.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <link rel="stylesheet" href="node_modules/popup-validation/bin/validation.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1 class="container">CURRÍCULO</h1>
+  <form action="" method="GET" class="box-style">
+    <fieldset class="fieldset">
+      <div class="container">
+        <label class="lead" for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" class="form-control form__input" aria-describedby="nome-help-blck" >
+        <div id="nome-help-block" class="form-text validate" data-validate="required">*Campo obrigatório - Seu nome deve conter no máximo 40 caracteres</div>
+      </div>
+      <div class="container">
+        <label class="lead" for="email">E-mail:</label>
+        <input type="text" id="email" class="form-control validate" aria-describedby="email-help-block" data-validate="required,email">
+        <div id="email-help-block" class="form-text">*Campo obrigatório - Seu e-mail deve conter no máximo 50 caracteres</div>
+      </div>
+      <div class="container">
+        <label class="lead" for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" class="form-control" aria-describedby="cpf-help-block">
+        <div id="cpf-help-block" class="form-text">*Campo obrigatório</div>
+      </div>
+      <div class="container">
+        <label class="lead" for="adress">Endereço:</label>
+        <input type="text" name="adress" id="adress" class="form-control" aria-describedby="adress-help-block">
+        <div id="adress-help-block" class="form-text">*Campo obrigatório - Máximo de 200 caracteres</div>
+      </div>
+      <div class="container">
+        <label class="lead" for="city">Cidade:</label>
+        <input type="text" maxlength="28" id="city" class="form-control" aria-describedby="city-help-block">
+        <div id="city-help-block" class="form-text">*Campo obrigatório - Máximo de 28 caracteres</div>
+      </div>
+      <div class="container dropdown">
+        <label class="lead" for="state">Estado:</label>
+        <select id="state" name="state" class="btn btn-secondary" aria-describedby="state-help-block">
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option selected value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+          <option value="EX">Estrangeiro</option>
+        </select>
+        <div id="state-help-block" class="form-text">*Campo obrigatório</div>
+      </div>
+      <div class="container">
+        <div class="form-check">
+          <label for="casa">
+            <input type="radio" id="casa" name="casa-apartamento" class="form-check-input">Casa
+          </label>
+        </div>
+        <div class="form-check">
+          <label for="apartamento">
+            <input type="radio" id="apartamento" name="casa-apartamento" class="form-check-input">Apartamento
+          </label>
+        </div>
+        <div id="house-help-block" class="form-text">*Campo obrigatório</div>
+      </div>
+      
+    </fieldset>
+    <fieldset class="fieldset">
+      <div class="container">
+        <label for="resume" class="lead">Resumo do Currículo</label>
+        <textarea name="resume" id="resume" rows="10" maxlength="1000" class="form-control"></textarea>
+        <div id="resume-help-block" class="form-text">*Campo obrigatório - Máximo de 1000 caracteres</div>
+      </div>
+      <div class="container">
+        <label class="lead" for="cargo">Cargo</label>
+        <input type="text" name="cargo" id="cargo" maxlength="40" class="form-control">
+        <div id="cargo-help-block" class="form-text">*Campo obrigatório - Máximo de 40 caracteres</div>
+      </div>
+      <div class="container">
+        <label class="lead" for="descricao-cargo">Descrição do Cargo</label>
+        <input type="text" name="descricao-cargo" id="descricao-cargo" maxlength="500" class="form-control">
+        <div id="description-help-block" class="form-text">*Campo obrigatório - Máximo de 500 caracteres</div>
+      </div>
+      <div class="container">
+        <label class="lead" for="date">Data de início</label>
+        <input type="text" id="datepicker">
+      </div>
+      <div class="container">
+
+      </div>
+    </fieldset>
+    <div class="container">
+      <label for="enviar"></label>
+      <input class="btn btn-primary" type="submit" name="enviar" id="enviar">
+    </div>
+  </form>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <script src="bootstrap-5.0.1-dist/js/bootstrap.js"></script>
+  <script src="node_modules/popup-validation/bin/validation.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
