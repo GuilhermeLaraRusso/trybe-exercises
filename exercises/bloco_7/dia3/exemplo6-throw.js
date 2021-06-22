@@ -10,3 +10,5 @@ function division(x, y) {
 }
 
 assert.throws(() => { division(10, 0); }, /^Error: parameter y must not be 0$/); // OK
+
+assert.throws(() => { division(10, 1); }, /^Error: parameter y must not be 0$/); // Não OK
