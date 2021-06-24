@@ -4,23 +4,22 @@
 const rightAnswers = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 const studentAnswers = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
-const checkAnswer = (array1, array2) => {
-  let points = 0;
-    for (let index = 0; index < array1.length; index += 1) {
-      if (array1[index] === array2[index]) {
-        points += 1;
-      } else if (array2 === 'N.A'){
-        points = points;
-      } else {
-        points -= 0.5;
-      }
+const funcaoChecar = (arrayGabarito, arrayResposta) => {
+  let total = 0;
+  for (let index = 0; index < arrayGabarito.length; index += 1){
+    if (arrayResposta[index] === arrayGabarito[index]){
+      total += 1;
+    } else if (arrayResposta[index] === 'N.A') {
+      total = total;
+    } else {
+      total -= 0.5;
     }
-  return points;
-} 
-
-const compareAnswers = (rightAnswers, studentAnswers, checkAnswer) => {
-  checkAnswer(rightAnswers, studentAnswers);
-  
+  }
+  console.log(`Sua nota na prova foi: ${total}/${arrayGabarito.length}`);
 }
 
-console.log(rightAnswers, studentAnswers, checkAnswer());
+const comparaNumeros = (gabarito, resposta, action) => {
+  action(gabarito, resposta)
+}
+
+comparaNumeros(rightAnswers, studentAnswers, funcaoChecar);
