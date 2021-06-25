@@ -68,7 +68,7 @@ const books = [
 // Dica: use a função forEach .
 
 function smallerName() {
-  let nameBook = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+  let nameBook = books[0].name;
   // escreva aqui o seu código
   books.forEach((book, index) => {
     console.log(books[index].name);
