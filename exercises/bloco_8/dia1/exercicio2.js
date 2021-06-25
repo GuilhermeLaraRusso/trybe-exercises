@@ -17,6 +17,5 @@ const comparaNumeros = (sorteio, numero) => {
     return 'Loser'
   }
 }
-// console.log(sorteio());
-// console.log(numero());
+
 console.log(comparaNumeros(sorteio(), numero()));
