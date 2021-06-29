@@ -14,4 +14,4 @@ let citiesAndStates = cities.map((city) => {
   return `${city.name} - ${city.state}`;
 });
 
-console.log(citiesAndStates)
+console.log(citiesAndStates);
