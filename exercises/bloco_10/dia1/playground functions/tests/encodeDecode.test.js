@@ -14,4 +14,24 @@ describe('9 - Crie uma função que Codifique e Decodifique', () => {
     expect(challenges.decode('Th3s 3s 1n 2nc4d3ng t2st.')).toBe('This is an encoding test.');
     expect(challenges.decode('g4 Tryb2!')).toBe('go Trybe!');
   });
+
+  test('If it is a function', () => {
+    expect(typeof challenges.encode).toBe('function');
+  });
+
+  it('Should encode vowels into numbers', () => {
+    expect(challenges.encode('a')).toBe('1');
+    expect(challenges.encode('e')).toBe('2');
+    expect(challenges.encode('i')).toBe('3');
+    expect(challenges.encode('o')).toBe('4');
+    expect(challenges.encode('u')).toBe('5');
+  });
+
+  it('Should decode numbers into vowels', () => {
+    expect(challenges.decode('1')).toBe('a');
+    expect(challenges.decode('2')).toBe('e');
+    expect(challenges.decode('3')).toBe('i');
+    expect(challenges.decode('4')).toBe('o');
+    expect(challenges.decode('5')).toBe('u');
+  });
 });
