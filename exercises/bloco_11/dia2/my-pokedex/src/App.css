@@ -1,0 +1,19 @@
+body {
+  min-height: 100vh;
+  background-color: #303030;
+  color: #fafafa;
+  padding: 1rem;
+}
+
+.pokemon-list {
+  display: flex;
+}
+
+.pokemon-list .pokemon-card {
+  padding: 1rem;
+  background-color: #555555;
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  max-width: 400px;
+}
