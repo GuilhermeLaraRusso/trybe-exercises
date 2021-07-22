@@ -6,7 +6,11 @@ body {
 }
 
 .pokemon-list {
-  display: flex;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
 }
 
 .pokemon-list .pokemon-card {
@@ -15,5 +19,7 @@ body {
   margin: 1rem;
   border-radius: 1rem;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  max-width: 400px;
+  max-width: auto;
+  height: auto;
+  flex-grow: auto;
 }

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import pokemons from './data';
 import PokemonCard from './PokemonCard';
