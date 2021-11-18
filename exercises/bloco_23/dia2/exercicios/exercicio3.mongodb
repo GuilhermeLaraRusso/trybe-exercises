@@ -1,0 +1,5 @@
+// Exercício 3: Retorne o total de super-heróis menores que 1.80m.
+
+use ('class');
+
+db.superheroes.find( { 'aspects.height': { $lt: 180}}).count();
