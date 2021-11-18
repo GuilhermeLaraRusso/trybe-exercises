@@ -1,0 +1,5 @@
+
+
+use ("conteudo_trybe");
+
+db.customers.find();

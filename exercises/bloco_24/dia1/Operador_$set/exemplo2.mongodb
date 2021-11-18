@@ -1,0 +1,10 @@
+//Exemplo 2: Alterando campos em documentos embedados
+//Para alterar campos dentro de subdocumentos, você deve utilizar o mesmo conceito de dot notation visto durante as operações de find() .
+//A operação abaixo altera o valor do campo make dentro do subdocumento details em que o campo _id seja igual a 100 :
+
+use ("conteudo_trybe");
+
+db.products.update(
+  { _id: 100 },
+  { $set: { "details.make": "zzz"}}
+);

@@ -1,0 +1,3 @@
+use ("conteudo_trybe");
+
+db.fruits.find();

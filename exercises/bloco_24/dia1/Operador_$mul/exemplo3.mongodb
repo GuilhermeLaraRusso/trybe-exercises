@@ -1,0 +1,8 @@
+// Você também pode multiplicar valores com tipos diferentes. Veja o documento abaixo:
+
+use ("conteudo_trybe");
+
+db.products.update(
+  { _id: 3},
+  { $mul: { price: NumberInt(5)}}
+)

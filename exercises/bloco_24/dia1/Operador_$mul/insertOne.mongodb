@@ -1,0 +1,13 @@
+use ("conteudo_trybe");
+
+db.products.insertOne(
+  { "_id": 1, "item": "ABC", "price": NumberDecimal("10.99"), "qty": 25}
+);
+
+db.products.insertOne(
+  { _id: 2, item: "Unknown" }
+);
+
+db.products.insertOne(
+  { _id: 3,  item: "XYZ", price: NumberLong("10") }
+);

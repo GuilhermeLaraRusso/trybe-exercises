@@ -1,0 +1,6 @@
+use ("conteudo_trybe");
+
+db.fruits.updateMany(
+  { pdroductName: "Banana"},
+  { $unset: { quantity: ""}}
+);

@@ -1,0 +1,5 @@
+//Na operação de update a seguir, o operador $inc é utilizado para decrementar o valor do campo qty em 2 (incrementa em -2 ) e incrementar o valor do campo metrics.orders em 1 :
+
+use ("conteudo_trybe");
+
+db.increment.find();
