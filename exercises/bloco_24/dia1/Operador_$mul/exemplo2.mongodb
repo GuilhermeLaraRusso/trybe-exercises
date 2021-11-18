@@ -1,0 +1,9 @@
+//Você pode utilizar o $mul em um campo que não exista no documento. Nesse caso, o operador criará o campo e atribuirá a ele o valor zero do mesmo tipo numérico do multiplicador .
+//Considerando um outro documento na coleção products :
+
+use ("conteudo_trybe");
+
+db.products.update(
+  { _id: 2},
+  { $mul: { price: NumberLong("100")}}
+);
