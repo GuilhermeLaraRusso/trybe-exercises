@@ -1,0 +1,13 @@
+use ("sales");
+
+db.profiles.updateOne(
+  {_id: 1},
+  {
+    $push: {
+      items: {
+        $each: [ 3, 5, 6, 7, 7, 8],
+      }
+    }
+  },
+  {upsert: true}
+)
