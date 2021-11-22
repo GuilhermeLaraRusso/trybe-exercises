@@ -1,0 +1,11 @@
+use ("class");
+
+db.recipes.updateOne(
+  { title: "Panqueca Simples" },
+  {
+    $set : {
+      "ingredients.$[elemento].unit": "xícara",
+    },
+  },
+  { arrayFilters: [ { "elemento.name": "Farinha Integral" } ] },
+);

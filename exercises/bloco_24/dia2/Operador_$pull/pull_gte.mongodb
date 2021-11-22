@@ -1,0 +1,12 @@
+// Você pode remover todos os elementos do array votes que sejam maiores ou iguais a ( $gte ) 6 . Por exemplo:
+
+use ("sales");
+
+db.profiles.updateOne(
+  { _id: 1},
+  {
+    $pull: {
+      items: { $gte: 6},
+    }
+  }
+)
