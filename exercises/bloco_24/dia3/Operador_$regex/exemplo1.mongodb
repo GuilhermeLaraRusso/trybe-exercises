@@ -1,0 +1,7 @@
+// A query abaixo seleciona todos os documentos em que o campo sku "termine" com "789" :
+
+use ("class");
+
+db.products.find(
+  { sku: { $regex: /789$/}}
+);

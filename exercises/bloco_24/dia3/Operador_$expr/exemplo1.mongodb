@@ -1,0 +1,9 @@
+// A query abaixo utiliza o operador $expr para buscar os documentos em que o valor de spent exceda o valor de budget :
+
+use ("class");
+
+db.monthlyBudget.find(
+  {
+    $expr: { $gt: [ "$spent", "$budget"]}
+  }
+)
