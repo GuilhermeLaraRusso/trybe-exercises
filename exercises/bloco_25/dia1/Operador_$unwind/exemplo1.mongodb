@@ -1,0 +1,9 @@
+use ("class");
+
+db.inventory.aggregate(
+  [
+    {
+      $unwind: "$sizes"
+    }
+  ]
+)

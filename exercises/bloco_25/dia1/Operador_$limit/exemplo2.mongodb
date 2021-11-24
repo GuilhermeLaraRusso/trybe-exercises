@@ -1,0 +1,17 @@
+// Selecione todas as transações feitas pelo cliente chamado "Dave America".
+
+use ("class");
+
+db.transactions.aggregate(
+  [
+    {
+      $match:
+      {
+        $or: [
+          { value: { $gt: 700, $lt: 6000}},
+          { to: "Lisa Simpson"}
+        ]
+      }
+    }
+  ]
+)

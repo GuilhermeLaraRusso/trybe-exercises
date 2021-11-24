@@ -1,0 +1,16 @@
+// Exemplo 2: Retornando valores distintos
+// O operador $group também pode ser utilizado para encontrar os valores distintos de um campo. Por exemplo, se quiser saber todos os valores únicos do campo item e quantos são, faça como o exemplo seguinte:
+
+use ("class");
+
+db.sales.aggregate(
+  [
+    {
+      $group:
+      {
+        _id: "$item",
+        count: { $sum: 1}
+      }
+    }
+  ]
+)

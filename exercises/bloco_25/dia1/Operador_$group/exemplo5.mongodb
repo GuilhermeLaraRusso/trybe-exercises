@@ -1,0 +1,25 @@
+// Exemplo 5: Agrupando por null
+// Você pode executar operações matemáticas em todos os documentos de uma coleção. Basta passar null no _id e seguir com os operadores de acumulação.
+// No exemplo a seguir, a operação de agregação retornará um documento com o valor total da venda, a quantidade média de itens vendidos e o total de vendas:
+
+use ("class");
+
+db.sales.aggregate(
+  [
+    {
+      $group:
+      {
+        _id: null,
+        totalSaleAmount:
+        {
+          $sum: { $multiply: ["$price", "$quantity"]}
+        },
+        averageQuantity:
+        {
+          $avg: "$quantity",
+        },
+          count: { $sum: 1}
+      }
+    }
+  ]
+)

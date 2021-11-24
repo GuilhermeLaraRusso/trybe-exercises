@@ -1,0 +1,25 @@
+// Exemplo 4: Having (do Mysql), combinando estágios no aggregate
+// Também é possível realizar operações equivalentes ao HAVING do SQL , que nada mais é que um filtro depois de um agrupamento. Por exemplo, se você quiser manter o agrupamento anterior, mas saber apenas as vendas que possuem valores maiores do que 100 , é só adicionar mais um estágio no pipeline :
+
+use ("class");
+
+db.sales.aggregate(
+  [
+    {
+      $group:
+      {
+        _id: "$item",
+        totalSaleAmount: 
+        {
+          $sum:
+          {
+            $multiply: ["$price", "$quantity"]
+          }
+        }
+      }
+    },
+    {
+      $match: { "totalSaleAmount": { $gte: 100}}
+    }
+  ]
+)

@@ -1,0 +1,16 @@
+// Exemplo 1: Contando o número de documentos
+// Você pode utilizar o operador $group para contar o número de documentos da coleção sales :
+
+use("class");
+
+db.sales.aggregate(
+  [
+    {
+      $group:
+      {
+        _id: null,
+        count: { $sum: 1}
+      }
+    }
+  ]
+)

@@ -1,0 +1,20 @@
+// Exemplo 3: Somando valores
+// Para saber o valor das vendas, você deve utilizar o operador $sum , que, por sua vez, aceita mais modificadores. No exemplo que se segue, multiplica-se o valor do campo price pelo valor do campo quantity :
+
+use ("class");
+
+db.sales.aggregate(
+  [
+    {
+      $group:
+      {
+        _id: "$item",
+        totalSaleAmount: {
+          $sum: {
+            $multiply: ["$price", "$quantity"]
+          }
+        }
+      }
+    }
+  ]
+)
