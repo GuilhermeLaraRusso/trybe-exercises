@@ -1,0 +1,7 @@
+// Você pode especificar opções na regex. Por exemplo, você pode especificar a opção case-insensitive , fazendo com que o MongoDB ignore letras maiúsculas ou minúsculas. Veja o exemplo abaixo, que retorna palavras "começando" com ABC:
+
+use ("class");
+
+db.products.find(
+  { sku: { $regex: /^ABC/i}}
+);

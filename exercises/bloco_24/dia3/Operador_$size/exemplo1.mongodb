@@ -1,0 +1,9 @@
+// O operador $size seleciona documentos em que um array contenha um número de elementos especificado.
+
+// Ao executar a query abaixo, apenas os documentos com o _id igual 1 e 2 serão retornados, pois seus campos tags são arrays e contêm exatamente 2 elementos :
+
+use ("class");
+
+db.products.find(
+  {tags: { $size: 2}}
+)

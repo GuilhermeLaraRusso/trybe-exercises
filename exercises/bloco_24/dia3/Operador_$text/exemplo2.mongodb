@@ -1,0 +1,8 @@
+// Você pode procurar por vários termos passando uma string delimitada por espaços . O operador $text fará uma busca lógica OR por cada um desses termos, retornando os documentos que contenham qualquer um deles.
+// A query abaixo especifica três termos ( "bake coffee cake" ) para a string $search :
+
+use ("class");
+
+db.articles.find(
+  { $text: { $search: "bake coffee cake"}}
+);

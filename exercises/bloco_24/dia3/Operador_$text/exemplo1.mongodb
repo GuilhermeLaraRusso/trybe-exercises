@@ -1,0 +1,7 @@
+// A query abaixo utiliza os operadores $text e $search para buscar todos os documentos que contenham o termo coffee :
+
+use ("class");
+
+db.articles.find(
+  { $text: { $search: "coffee"}}
+);

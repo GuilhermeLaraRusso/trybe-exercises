@@ -1,0 +1,5 @@
+// Primeiro, o comando para criar o índice do tipo text :
+
+use ("class");
+
+db.articles.createIndex({ subject: "text"});

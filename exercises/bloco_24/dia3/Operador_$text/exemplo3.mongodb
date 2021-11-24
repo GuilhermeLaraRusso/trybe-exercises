@@ -1,0 +1,7 @@
+// Procurar por frases também é possível. A query abaixo procura pela frase "coffee shop" :
+
+use ("class");
+
+db.articles.find(
+  { $text: { $search: "\"coffee shop\""}}
+);

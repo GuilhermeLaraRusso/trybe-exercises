@@ -1,0 +1,7 @@
+// A query a seguir seleciona todos os documentos da coleção em que o valor do campo qty módulo 4 seja 0 :
+
+use ("class");
+
+db.inventory.find(
+  { qty: { $mod: [4,0]}}
+);
