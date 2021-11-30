@@ -1,0 +1,20 @@
+// 2. Selecione quatro clientes com as suas respectivas transações recebidas.
+
+use ("class");
+
+db.clients.aggregate(
+  [
+    {
+      $lookup:
+      {
+        from: "transactions",
+        localField: "name",
+        foreignField: "to",
+        as: "transacoes"
+      }
+    },
+    {
+      $limit: 4
+    }
+  ]
+)

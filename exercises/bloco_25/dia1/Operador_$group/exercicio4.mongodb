@@ -1,0 +1,21 @@
+// 4. Selecione os bancos que têm o valor total de transações maior que 1000.
+
+use ("class");
+
+db.transactions.aggregate(
+  [
+    {
+      $group: 
+      {
+        _id: "$bank",
+        total: { $sum: "$value"}
+      }
+    },
+    {
+      $match:
+      {
+        total: { $gt: 1000}
+      }
+    }
+  ]
+)

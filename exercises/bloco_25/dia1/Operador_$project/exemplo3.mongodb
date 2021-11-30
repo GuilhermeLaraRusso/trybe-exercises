@@ -1,0 +1,15 @@
+// Exemplo 3: Excluindo outros campos
+// Quando você nega um campo específico, todos os outros serão incluídos no documento de saída. O exemplo abaixo exclui do documento de saída apenas o campo copies :
+
+use ("class");
+
+db.books.aggregate(
+  [
+    {
+      $project:
+      {
+        copies: 0
+      }
+    }
+  ]
+)

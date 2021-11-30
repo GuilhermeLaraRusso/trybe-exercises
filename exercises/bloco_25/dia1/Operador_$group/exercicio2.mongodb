@@ -1,0 +1,16 @@
+// Selecione o valor total das transações em cada banco e quantas são;
+
+use ("class");
+
+db.transactions.aggregate(
+  [
+    {
+      $group:
+      {
+        _id: "$bank",
+        total: {$sum: "$value"},
+        transactions: { $sum: 1}
+      }
+    }
+  ]
+)

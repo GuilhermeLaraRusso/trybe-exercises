@@ -1,0 +1,23 @@
+// Exemplo 5: Incluindo campos calculados
+// Podemos usar uma string iniciada com o caractere $ para indicar que queremos projetar um campo, assim: "$nomeDoCampo".
+// A operação a seguir adiciona os novos campos isbn , lastname e copiesSold :
+
+
+use ("class");
+
+db.books.aggregate([
+  {
+    $project: {
+      title: 1,
+      isbn: {
+        prefix: { $substr: ["$isbn", 0, 3] },
+        group: { $substr: ["$isbn", 3, 2] },
+        publisher: { $substr: ["$isbn", 5, 4] },
+        title: { $substr: ["$isbn", 9, 3] },
+        checkDigit: { $substr: ["$isbn", 12, 1] }
+      },
+      lastName: "$author.last",
+      copiesSold: "$copies"
+    }
+  }
+]);

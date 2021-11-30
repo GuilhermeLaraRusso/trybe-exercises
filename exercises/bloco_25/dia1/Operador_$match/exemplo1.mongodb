@@ -1,0 +1,13 @@
+// Exemplo 1: Igualdade simples
+// Vamos fazer uma operação utilizando o operador $match com igualdade simples:
+
+use ("class");
+
+db.articles.aggregate(
+  [{ 
+    $match:
+    {
+      author: "dave"
+    }
+  }]
+);

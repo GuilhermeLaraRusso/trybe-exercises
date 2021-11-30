@@ -1,0 +1,16 @@
+// Exemplo 4: Excluindo campos em subdocumentos
+// Para documentos embedados , seguimos os mesmos conceitos de dot notation :
+
+use ("class");
+
+db.books.aggregate(
+  [
+    {
+      $project:
+      {
+        "author.first": 0,
+        copies: 0
+      }
+    }
+  ]
+)

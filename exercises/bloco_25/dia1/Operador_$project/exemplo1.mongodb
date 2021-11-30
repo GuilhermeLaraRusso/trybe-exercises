@@ -1,0 +1,15 @@
+// Para incluir apenas os campos _id , title e author no documento de saída, utilize o operador $project da seguinte maneira:
+
+use ("class");
+
+db.books.aggregate(
+  [
+    {
+      $project:
+      {
+        title: 1,
+        author: 1
+      }
+    }
+  ]
+)

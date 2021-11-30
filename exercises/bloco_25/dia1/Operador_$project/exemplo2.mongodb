@@ -1,0 +1,17 @@
+// Exemplo 2: Excluindo o campo _id
+// Como você já viu, o campo _id é padrão e é o único que necessita de uma negação explícita para que não seja incluído no documento de saída:
+
+use ("class");
+
+db.books.aggregate(
+  [
+    {
+      $project:
+      {
+        _id: 0,
+        title: 1,
+        author: 1
+      }
+    }
+  ]
+)
