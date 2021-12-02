@@ -1,13 +1,11 @@
 {
-  "name": "my-scripts",
+  "name": "hello-world",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "imc": "node imc",
-    "velocidade": "node velocidade",
-    "sorteio": "node sorteio"
+    "start": "node index.js"
   },
   "author": "Guilherme",
   "license": "ISC",
