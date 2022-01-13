@@ -1,0 +1,9 @@
+module.exports = (req, res) => {
+  /** Se chegamos até aqui, quer dizer que o middleware de autenticação
+   * foi executado, adicionado as informações do token no objeto 'req'.
+   * Podemos, então, extrair as propriedades que queremos de 'req.user'
+   */
+  const { username, admin } = req.user;
+
+  res.status(200).json({ username, admin });
+};
